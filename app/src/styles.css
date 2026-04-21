@@ -1,0 +1,408 @@
+/* src/styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4; /* Couleur de fond plus douce */
+}
+
+nav {
+    height: 80px;
+    background-color: #333;
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav p {
+    font-weight: 700;
+    font-size: 18px; /* légèrement réduit */
+    margin: 0 15px; /* ajusté */
+    color: #007bff; /* Mettre en évidence l'email de l'utilisateur */
+}
+
+#logout {
+    font-size: 18px; /* ajusté */
+    font-weight: 700;
+    color: #eee;
+    text-decoration: none;
+    background-color: #dc3545; /* Couleur pour le logout */
+    border: none;
+    cursor: pointer;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#logout:hover {
+    background-color: #c82333;
+}
+
+a {
+    font-size: 18px; /* ajusté */
+    font-weight: 700;
+    color: #eee;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #007bff; /* Couleur au survol */
+}
+
+/* Styles pour les pages Login/SignUp */
+.sign-in-with-google {
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    padding: 10px 16px 10px 42px; /* Ajusté */
+    border: none;
+    border-radius: 5px; /* Ajusté */
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25);
+    color: #757575;
+    font-size: 18px; /* Ajusté */
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGh0NC44QzEzLjYgMTIgMTMgMTMgMTIgMTMuNnYyLjJoM2E4LjggOC44IDAgMCAwIDItNi42eiIgZmlsbD0iIzQyODVGNCIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTkgMThjMi40IDAgNC41LS44IDYtMi4ybC0zLTIuMmE1LjQgNS40IDAgMCAxLTgtMi45SDFWMTNhOSA5IDAgMCAwIDggNXoiIGZpbGw9IiMzNEE4NTMiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik00IDEwLjdjMC0xLjYgMC44LTMuMSAyLTQuNHYtLjNoLTRhOSA5IDAgMCAwIDAtOWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0ZCQkMwNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTkgMy42YzEuMyAwIDIuNS40IDMuNCAxLjNMMTUgMi4zQTkgOSAwIDAgMCAxIDVsMyAyLjRhNS40IDUuNCAwIDAgMSAtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=);
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: 12px center; /* Ajusté */
+}
+
+.sign-in-with-google:hover {
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.email-password {
+    height: 70vh;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input[type=email], input[type=password] {
+    width: 50%;
+    padding: 14px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.signUp {
+    padding: 12px 20px; /* Ajusté */
+    background-color: #007bff; /* Couleur primaire */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px; /* Ajusté */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signUp:hover {
+    background-color: #0056b3;
+}
+
+.already {
+    margin-top: 20px;
+    color: #007bff;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Styles pour le composant Home (Tableau de Bord) */
+.homePage {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.homePage h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.homePage p, .homePage ul {
+    color: #555;
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.homePage ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.homePage li {
+    background-color: #e9ecef;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    color: #333;
+}
+
+/* Styles pour les formulaires de setup (UserProfileSetup, FamilyMembersSetup) */
+.profile-setup-container, .family-setup-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease-out; /* Animation à l'apparition */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.profile-setup-container h2, .family-setup-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.profile-setup-container form, .member-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.profile-setup-container label, .member-form label {
+    font-weight: bold;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-setup-container label div { /* Pour les groupes radio/checkbox */
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+    font-weight: normal;
+}
+
+.profile-setup-container label input[type="radio"],
+.profile-setup-container label input[type="checkbox"],
+.member-form label input[type="radio"],
+.member-form label input[type="checkbox"] {
+    width: auto; /* Annule le width: 50% par défaut pour les inputs */
+    margin-right: 8px;
+    margin-bottom: 0; /* Important */
+}
+
+/* Styles pour le champ email grisé */
+.member-form label.disabled-email-input input[type="email"] {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+}
+.member-form label.disabled-email-input {
+    color: #a0a0a0; /* Couleur du texte pour les labels désactivés */
+}
+
+/* Boutons */
+.profile-setup-container button,
+.member-form button,
+.validate-family-btn {
+    padding: 12px 20px;
+    background-color: #28a745; /* Couleur verte pour les actions positives */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+.profile-setup-container button:hover,
+.member-form button:hover,
+.validate-family-btn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.member-form button[type="button"] { /* Bouton Annuler la modification */
+    background-color: #ffc107;
+    color: #333;
+}
+.member-form button[type="button"]:hover {
+    background-color: #e0a800;
+}
+
+.members-list {
+    margin-top: 30px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+}
+
+.members-list h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.members-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.members-list li.member-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s ease;
+}
+
+.members-list li.member-item:last-child {
+    border-bottom: none;
+}
+
+.members-list li.member-item:hover {
+    background-color: #eef;
+}
+
+.member-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 2px solid #ddd;
+}
+
+.member-details {
+    flex-grow: 1;
+    color: #444;
+}
+
+.member-name {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.member-email {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.member-actions button {
+    margin-left: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: #007bff; /* Bleu pour modifier */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.member-actions button.delete-btn {
+    background-color: #dc3545; /* Rouge pour supprimer */
+}
+
+.member-actions button:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+.no-members-message {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+    padding: 15px;
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Animations pour les listes */
+.members-list ul {
+    opacity: 0;
+    animation: slideIn 0.5s forwards;
+    animation-delay: 0.2s; /* Délai pour que la liste apparaisse après le formulaire */
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Styles pour les messages de chargement */
+.loading-message, .loading-screen {
+    text-align: center;
+    padding: 50px;
+    font-size: 1.5em;
+    color: #666;
+}
+
+/* MEDIA QUERIES - Ajustements */
+@media (max-width: 768px) {
+    input[type=email], input[type=password],
+    .homePage input, .homePage textarea {
+        width: 80%; /* Plus large sur les petits écrans */
+    }
+
+    .profile-setup-container, .family-members-container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+    }
+    nav a, nav p, #logout {
+        margin: 5px 0;
+    }
+
+    .display-todos { /* Ajustement de l'ancienne grille, si tu la gardes */
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    input[type=email], input[type=password],
+    .homePage input, .homePage textarea {
+        width: 95%; /* Encore plus large */
+    }
+
+    .sign-in-with-google {
+        font-size: 16px;
+        padding: 8px 12px 8px 38px;
+        background-position: 8px center;
+        background-size: 20px;
+    }
+
+    .profile-setup-container label div {
+        flex-direction: column; /* Les radios/checkboxes s'empilent */
+        gap: 8px;
+    }
+}
